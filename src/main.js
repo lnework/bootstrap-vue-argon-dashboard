@@ -17,11 +17,14 @@
 import Vue from 'vue';
 import DashboardPlugin from './plugins/dashboard-plugin';
 import App from './App.vue';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 // router setup
 import router from './routes/router';
 // plugin setup
 Vue.use(DashboardPlugin);
+Vue.use(ElementUI);
 
 /* eslint-disable no-new */
 new Vue({

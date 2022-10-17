@@ -3,6 +3,16 @@
     <notifications></notifications>
     <side-bar>
       <template slot="links">
+
+        <sidebar-item
+          :link="{
+            name: '敏感词检测',
+            path: '/sensitive-word',
+            icon: 'ni ni-book-bookmark text-primary',
+          }"
+        >
+        </sidebar-item>
+
         <sidebar-item
           :link="{
             name: 'Dashboard',

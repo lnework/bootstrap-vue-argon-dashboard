@@ -23,6 +23,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "demo" */ '../views/Icons.vue')
       },
       {
+        path: '/sensitive-word',
+        name: 'sensitive-word',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/SensitiveWord.vue')
+      },
+      {
         path: '/profile',
         name: 'profile',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')
