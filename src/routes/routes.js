@@ -28,6 +28,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "demo" */ '../views/SensitiveWord.vue')
       },
       {
+        path: '/voice-print',
+        name: 'voice-print',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/VoicePrint.vue')
+      },
+      {
         path: '/profile',
         name: 'profile',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')

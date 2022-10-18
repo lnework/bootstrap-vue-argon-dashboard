@@ -38,7 +38,7 @@
             </el-table-column>
 
             <el-table-column label="Users" min-width="190px">
-                <div class="avatar-group">
+                  <div class="avatar-group">
                     <a href="#" class="avatar avatar-sm rounded-circle" data-toggle="tooltip"
                        data-original-title="Ryan Tompson">
                         <img alt="Image placeholder" src="img/theme/team-1.jpg">

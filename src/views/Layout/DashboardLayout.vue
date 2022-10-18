@@ -12,6 +12,14 @@
           }"
         >
         </sidebar-item>
+        <sidebar-item
+          :link="{
+            name: '声纹识别',
+            path: '/voice-print',
+            icon: 'ni ni-circle-08 text-primary',
+          }"
+        >
+        </sidebar-item>
 
         <sidebar-item
           :link="{
