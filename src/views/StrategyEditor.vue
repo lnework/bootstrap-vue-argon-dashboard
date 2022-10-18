@@ -1,7 +1,7 @@
 <template>
   <div>
        <!-- BootstrapVue Done -->
-    <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-gradient-success">
+    <base-header class="pb-1 pb-1 pt-3 pt-md-6 bg-gradient-success">
 
     </base-header>
 

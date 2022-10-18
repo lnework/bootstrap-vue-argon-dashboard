@@ -1,7 +1,7 @@
 <template>
   <div>
        <!-- BootstrapVue Done -->
-    <base-header class="pb-6 pb-8 pt-5 pt-md-8 bg-gradient-success">
+    <base-header class="pb-1 pb-1 pt-5 pt-md-6 bg-gradient-success">
 
       <el-row :gutter="20" >
         <el-col :span="4">
@@ -74,7 +74,7 @@
           <el-col :span="6">
             <el-row>
               <el-col :span="6">
-                <h3 class="mb-0">音频种子库</h3>
+                <h4 class="mb-0">音频种子库</h4>
               </el-col>
               <el-col :span="18">
                 <b-form-group class="mb-0">
