@@ -33,6 +33,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "demo" */ '../views/VoicePrint.vue')
       },
       {
+        path: '/audio-print',
+        name: 'audio-print',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/AudioPrint.vue')
+      },
+      {
         path: '/profile',
         name: 'profile',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')

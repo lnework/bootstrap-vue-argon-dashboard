@@ -23,6 +23,14 @@
 
         <sidebar-item
           :link="{
+            name: '音频指纹识别',
+            path: '/audio-print',
+            icon: 'ni ni-note-03 text-primary',
+          }"
+        >
+        </sidebar-item>
+        <sidebar-item
+          :link="{
             name: 'Dashboard',
             path: '/dashboard',
             icon: 'ni ni-tv-2 text-primary',
