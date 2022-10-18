@@ -38,6 +38,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "demo" */ '../views/AudioPrint.vue')
       },
       {
+        path: '/strategy-editor',
+        name: 'strategy-editor',
+        component: () => import(/* webpackChunkName: "demo" */ '../views/StrategyEditor')
+      },
+      {
         path: '/profile',
         name: 'profile',
         component: () => import(/* webpackChunkName: "demo" */ '../views/Pages/UserProfile.vue')

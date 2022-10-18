@@ -31,6 +31,14 @@
         </sidebar-item>
         <sidebar-item
           :link="{
+            name: '策略编辑器',
+            path: '/strategy-editor',
+            icon: 'ni ni-caps-small text-primary',
+          }"
+        >
+        </sidebar-item>
+        <sidebar-item
+          :link="{
             name: 'Dashboard',
             path: '/dashboard',
             icon: 'ni ni-tv-2 text-primary',
