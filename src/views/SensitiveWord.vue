@@ -2,8 +2,10 @@
   <div>
        <!-- BootstrapVue Done -->
     <base-header class="pb-8 pb-8 pt-5 pt-md-6 bg-gradient-success">
-
       <el-row :gutter="20" >
+        <el-col :span="2">
+          &nbsp;
+        </el-col>
         <el-col :span="6">
           <el-input v-model="input" placeholder="输入音频ID号" style="width: 250px"></el-input>
 
@@ -12,15 +14,13 @@
             action="https://jsonplaceholder.typicode.com/posts/"
             multiple>
             <i class="el-icon-upload"></i>
-            <div class="el-upload__text">将音频拖到此处，或<em>点击上传</em></div>
+            <div class="el-upload__text">将音频拖到此处或<em>点击上传</em></div>
           </el-upload>
 
           <el-button type="primary" round  style="width: 250px">音频检测</el-button>
         </el-col>
-        <el-col :span="18">
-          <el-card shadow="always">
-            这是一行文本，特别长.....
-          </el-card>
+        <el-col :span="12">
+          <el-input v-model="audioText" placeholder="输入音频ID号" style="width: 100%;margin-bottom: 10px"></el-input>
           <el-table
             :data="tableData"
             height="200"
@@ -28,6 +28,7 @@
             <el-table-column
               prop="date"
               label="词类"
+              align="center"
               width="180">
             </el-table-column>
             <el-table-column
@@ -37,11 +38,14 @@
             </el-table-column>
             <el-table-column
               prop="address"
+
               label="敏感词">
             </el-table-column>
           </el-table>
         </el-col>
-
+        <el-col :span="4">
+          &nbsp;
+        </el-col>
       </el-row>
 
       <!-- Card stats -->
@@ -100,23 +104,23 @@
 
     data() {
       return {
-
+        audioText: '我说了一句话，含有敏感词国旗国歌信用卡毒品上海疫情',
         tableData: [{
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
+          date: '政治敏感',
+          name: '30',
+          address: '国旗、国歌'
         }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1517 弄'
+          date: '高危违法',
+          name: '10',
+          address: '毒品'
         }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1519 弄'
+          date: '谣言',
+          name: '5',
+          address: '上海疫情'
         }, {
-          date: '2016-05-03',
+          date: '普通违规',
           name: '王小虎',
-          address: '上海市普陀区金沙江路 1516 弄'
+          address: '信用卡'
         }]
       ,
         sensitiveTableData: [
@@ -344,5 +348,25 @@
   width: 250px;
   height: 150px;
   margin-top: 10px;
+}
+.text {
+  font-size: 8px;
+}
+
+.item {
+  margin-bottom: 18px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both
+}
+
+.box-card {
+  width: 480px;
 }
 </style>

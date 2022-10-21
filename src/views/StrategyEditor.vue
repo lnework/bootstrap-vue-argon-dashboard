@@ -45,11 +45,41 @@
               <i class="el-icon-upload"></i>
               <div class="el-upload__text">将音频拖到此处，或<em>点击上传</em></div>
             </el-upload>
-
             <el-button type="primary" round  style="width: 250px">音频检测</el-button>
+
+            <el-table
+              :data="tableData"
+              height="200"
+              style="width: 100%; margin-top: 10px"
+            >
+              <el-table-column
+                prop="date"
+                label="风险类型"
+                width="80"
+                align="center">
+              </el-table-column>
+              <el-table-column
+                prop="name"
+                label="识别结果"
+                width="180">
+              </el-table-column>
+              <el-table-column
+                label="风险分数"
+                prop="likeRate"
+                width="80"
+                align="center"
+              >
+
+              </el-table-column>
+            </el-table>
+
+            <h3 style="margin-top: 20px">仲裁结果: &nbsp;&nbsp;&nbsp;
+              <el-tag type="danger">命中音频黑库</el-tag>
+            </h3>
+
+
           </el-col>
         </el-row>
-
       </div>
 
     </b-card>
@@ -71,30 +101,20 @@
 
         tableData: [
           {
-            date: '1',
-            name: '李云龙',
+            date: '敏感词',
+            name: '毒品、冰毒',
             statusType: '1',
+            likeRate: 30
+          },
+          {
+            date: '声纹',
+            name: '李四',
             likeRate: 95
           },
           {
-            date: '2',
-            name: '李永乐',
-            likeRate: 76
-          },
-          {
-            date: '3',
-            name: '张三',
-            likeRate: 66
-          },
-          {
-            date: '4',
-            name: '李四',
-            likeRate: 33
-          },
-          {
-            date: '5',
-            name: '王五',
-            likeRate: 22
+            date: '音频指纹',
+            name: '测试黑产音频_A',
+            likeRate: 90
           },
         ],
         options: [{

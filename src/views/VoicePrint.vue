@@ -2,10 +2,11 @@
   <div>
        <!-- BootstrapVue Done -->
     <base-header class="pb-2 pb-2 pt-5 pt-md-6 bg-gradient-success">
-      <el-row :gutter="20" >
-        <el-col :span="4">
+      <el-row :gutter="40">
+        <el-col :span="2">
+          &nbsp;
         </el-col>
-        <el-col :span="6">
+        <el-col :span="8" style="text-align: right">
           <el-input v-model="input" placeholder="输入音频ID号" style="width: 250px"></el-input>
 
           <el-upload
@@ -18,16 +19,18 @@
 
           <el-button type="primary" round  style="width: 250px">音频检测</el-button>
         </el-col>
-        <el-col :span="8">
-
+        <el-col :span="10" style="text-align: left">
+          <h3>识别结果</h3>
           <el-table
             :data="tableData"
-            height="250"
-            style="width: 100%">
+            height="200"
+            style="width: 100%"
+          >
             <el-table-column
               prop="date"
               label="排序"
-              width="80">
+              width="80"
+              align="center">
             </el-table-column>
             <el-table-column
               prop="name"
@@ -36,7 +39,8 @@
             </el-table-column>
             <el-table-column
               label="相似度"
-              width="240"
+              width="260"
+              align="center"
             >
               <template v-slot="{row}">
                 <el-progress :text-inside="true" :stroke-width="26" :percentage="row.likeRate"></el-progress>
@@ -44,7 +48,8 @@
             </el-table-column>
           </el-table>
         </el-col>
-        <el-col :span="6">
+        <el-col :span="4">
+          &nbsp;
         </el-col>
       </el-row>
 
@@ -95,7 +100,7 @@
               <el-col :span="4">
                 <el-switch
                   v-model="value1"
-                  active-text="自动启用"
+                  active-text="启用"
                   inactive-text="冻结">
                 </el-switch>
               </el-col>
@@ -119,9 +124,10 @@
 
       <el-table class="table-responsive table"
                 header-row-class-name="thead-light"
+                style="margin-left: 15px"
                 :data="speakerData">
         <el-table-column label="音频名"
-                         min-width="100px"
+                         min-width="80px"
                          prop="name">
           <template v-slot="{row}">
             <b-media no-body class="align-items-center">
@@ -143,7 +149,7 @@
           </template>
         </el-table-column>
         <el-table-column label="描述"
-                         min-width="210px"
+                         min-width="180px"
                          prop="name">
           <template v-slot="{row}">
             <b-media no-body class="align-items-center">
@@ -192,18 +198,18 @@
         tableData: [
           {
             date: '1',
-            name: '李云龙',
-            likeRate: 95
+            name: '洪七公',
+            likeRate: 88
           },
           {
             date: '2',
-            name: '李永乐',
-            likeRate: 76
+            name: '李云龙',
+            likeRate: 34
           },
           {
             date: '3',
-            name: '张三',
-            likeRate: 66
+            name: '吴亦凡',
+            likeRate: 21
           },
           {
             date: '4',
@@ -218,39 +224,39 @@
         ],
         speakerData:[
           {
-            audio_name:'亮剑电视剧',
-            speaker_name:'李云龙',
-            description:'描述一下',
+            audio_name:'洪七公测试语音.wav',
+            speaker_name:'洪七公',
+            description:'测试音频，用于检测声纹苦效果',
             status:'1',
           },
           {
-            audio_name:'',
+            audio_name:'特朗普演讲音频.wav',
+            speaker_name:'唐纳德·特朗普',
+            description:'美国第45任总统',
+            status:'1',
+          },
+          {
+            audio_name:'亮剑电视剧李云龙音频.wav',
             speaker_name:'李云龙',
-            description:'',
+            description:'亮剑电视剧人物，由于语音特色，常被二次创作恶搞，需监控',
             status:'2',
           },
           {
-            audio_name:'',
-            speaker_name:'特朗普',
-            description:'',
-            status:'',
+            audio_name:'郑爽语音.wav',
+            speaker_name:'郑爽',
+            description:'涉嫌签订阴阳合同、天价片酬、偷税、代孕，为劣迹艺人，严格打击其作品传播',
+            status:'1',
           },
           {
-            audio_name:'',
-            speaker_name:'汤家凤',
-            description:'',
-            status:'',
+            audio_name:'薇娅直播带货高清语音片段.wav',
+            speaker_name:'薇娅',
+            description:'涉嫌逃税，不能继续直播带货，进行封杀',
+            status:'1',
           },
           {
-            audio_name:'',
-            speaker_name:'张宇',
-            description:'',
-            status:'',
-          },
-          {
-            audio_name:'',
-            speaker_name:'李永乐',
-            description:'',
+            audio_name:'吴亦凡采访高清语音.wav',
+            speaker_name:'吴亦凡',
+            description:'涉嫌违法犯罪，为劣迹艺人，其作品全部下架，不予展示',
             status:'',
           },
           {
