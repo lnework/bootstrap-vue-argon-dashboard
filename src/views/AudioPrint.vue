@@ -289,7 +289,7 @@
             name: 'BAC009S0002W0122',
             description:'冗余测试音频',
             print_count: 8,
-            likeRate: 76,
+            likeRate: 18,
             statusType: '1',
           },
           {
@@ -297,7 +297,7 @@
             name: 'BAC009S0358W0401',
             description:'冗余测试音频',
             print_count: 7,
-            likeRate: 66,
+            likeRate: 15,
             statusType: '1',
           },
           {
@@ -305,7 +305,7 @@
             name: 'BAC009S0761W0295',
             description:'冗余测试音频',
             print_count: 7,
-            likeRate: 33,
+            likeRate: 15,
             statusType: '1',
           },
           {
